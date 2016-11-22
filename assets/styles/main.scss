@@ -1,0 +1,179 @@
+@import "variables";
+@import "../../bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
+@import "fonts";
+
+//== Global
+//
+section, footer {
+  padding: 50px 0;
+}
+
+.col-centered {
+  margin-left: auto;
+  margin-right: auto;
+  float: none;
+}
+
+h1 {
+  font-family: 'BebasNeue';
+  color: $white;
+  font-size: 4em;
+  margin: 0 0 .5em;
+}
+
+
+//== Hero Area
+//
+.background-hero {
+  background-image: url('../images/transit-hero.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+  font-size: .75em;
+  padding: 0;
+
+  @media (min-width: $screen-md-min) {
+    font-size: 1em;
+  }
+
+  .container {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  p {
+    font-size: 1.5em;
+    color: $gray-base;
+    margin-bottom: 1em;
+  }
+}
+
+.embed-responsive {
+  margin: 2em 0;
+  background: $gray-base;
+  box-shadow: 0 2px 34px rgba(0, 0, 0, .5);
+}
+
+
+//== Panel
+//
+.panel {
+  border: none;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, .25);
+}
+.panel-heading {
+  background: $green;
+  text-align: center;
+  padding: 15px 15px 10px;
+}
+
+.panel-title {
+  text-transform: uppercase;
+  color: $indigo;
+  font-weight: bold;
+  font-size: 1.25em;
+}
+
+
+//== Forms
+//
+label {
+  font-weight: normal;
+}
+.form-group.row {
+  @media (max-width: $screen-sm-max) {
+    div[class*="col"]:not(:last-child) {
+      margin-bottom: 15px;
+    }
+  }
+}
+
+
+//== Buttons
+//
+.btn {
+  text-transform: uppercase;
+  box-shadow: 2px 2px 0 2px darken($orange, 20%);
+}
+
+
+//== Bullet text area
+//
+.bullet-text {
+  @media (min-width: $screen-md-min) {
+    font-size: 1.25em;
+  }
+
+  img {
+    margin-bottom: 1.5em;
+
+    @media (max-width: $screen-sm-max) {
+      max-width: 50%;
+    }
+  }
+
+  p:last-child {
+    margin-bottom: 2em;
+  }
+}
+
+
+//== Quote area
+//
+.background-blue {
+  background: $transloc-blue;
+  color: $white;
+}
+
+blockquote {
+  padding: 0;
+  border: none;
+  position: relative;
+  font-size: .9em;
+
+  @media (min-width: $screen-md-min) {
+    font-size: 1em;
+  }
+
+  p {
+    font-size: 1.5em;
+
+    &::before, &::after {
+      content: "";
+      background-size: 100% 100%;
+      width: 13px;
+      height: 14px;
+      display: inline-block;
+      vertical-align: top;
+      position: relative;
+    }
+
+    &::before {
+      left: -5px;
+      background: url('../images/quote-left.svg') no-repeat;
+    }
+
+    &::after {
+      right: -5px;
+      background: url('../images/quote-right.svg') no-repeat;
+    }
+  }
+}
+
+
+//== Footer
+//
+footer {
+  background: $indigo;
+  color: $white;
+  font-size: .8em;
+
+  @media (min-width: $screen-md-min) {
+    font-size: 1em;
+  }
+
+  a {
+    color: $white;
+    text-decoration: underline;
+  }
+}
