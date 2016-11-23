@@ -43,8 +43,12 @@ h1 {
 
   p {
     font-size: 1.5em;
-    color: $gray-base;
     margin-bottom: 1em;
+    color: $white;
+
+    @media (min-width: $screen-md-min) {
+      color: $gray-base;
+    }
   }
 }
 
